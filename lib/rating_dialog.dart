@@ -11,7 +11,7 @@ class _RatingDialogState extends State<RatingDialog> {
     for (int rateValue = 1; rateValue <= 5; rateValue++) {
       final starRatingButton = IconButton(
           icon: Icon(_rating >= rateValue ? Icons.star : Icons.star_border,
-              color: widget.accentColor, size: 35),
+              color: widget.accentColor, size: 30),
           onPressed: () {
             setState(() {
               _rating = rateValue;
