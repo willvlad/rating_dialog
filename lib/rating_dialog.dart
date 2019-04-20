@@ -30,7 +30,7 @@ class _RatingDialogState extends State<RatingDialog> {
     // final Color commentColor = _rating >= 4 ? Colors.green[600] : Colors.red;
 
     return AlertDialog(
-      contentPadding: EdgeInsets.all(20),
+      contentPadding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
       content: Column(
         mainAxisSize: MainAxisSize.min,
@@ -40,11 +40,12 @@ class _RatingDialogState extends State<RatingDialog> {
           Text(widget.title,
               style:
                   const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           Text(
             widget.description,
             textAlign: TextAlign.center,
           ),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: _buildStarRatingButtons(),
